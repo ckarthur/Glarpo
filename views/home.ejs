@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <!-- NAVIGATION BAR -->
+ 
   <div class="navbar">
     <div class="nav-container">
       <div class="nav-logo">
@@ -21,15 +21,15 @@
     </div>
   </div>
 
-  <!-- MAIN TRIVIA SECTION -->
+  
   <div class="trivia-container">
 
-    <!-- FLASH MESSAGE IF PRESENT -->
+    
     <% if (message) { %>
       <div class="message"><%= message %></div>
     <% } %>
 
-    <!-- FORM 1: REQUEST A TRIVIA QUESTION -->
+    
     <form action="/question" method="POST">
       <fieldset>
         <legend>Trivia Challenge</legend>
@@ -50,7 +50,7 @@
       </fieldset>
     </form>
 
-    <!-- FORM 2: DISPLAY QUESTION + SUBMIT ANSWER -->
+    
     <% if (question) { %>
       <div class="question-box" id="questionDisplay">
         <%= question %>
