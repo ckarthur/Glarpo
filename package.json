@@ -1,0 +1,19 @@
+{
+  "name": "final",
+  "version": "1.0.0",
+  "description": "**Submitted by:** Matthew Welling (mwell04)\r **Group Members:** Christian Arthur (ckarthur), Andy Sun (andysun), Matthew Welling (mwell04)\r **App Description:** Allows users to answer trivia questions and track their scores via a leaderboard\r **YouTube Video Link:** \r **APIs:** The Trivia API <https://the-trivia-api.com>\r **Contact Email:** mwell04@terpmail.umd.edu\r **Deployed App Link:**",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "mongoose": "^9.0.1"
+  }
+}

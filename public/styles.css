@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oswald:wght@200..700&display=swap');
+/* General Layout */
+body {
+    font-family: 'Orbitron', Arial, sans-serif;
+    background-color: #2E373C;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #071216;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-logo a {
+    color: #CC4A19;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: #DB8548;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #CC4A19;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Trivia Box */
+.trivia-container {
+    background: #F8CD7F;
+    padding: 10px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+    width: 90%;
+    max-width: 450px;
+	border: 10px solid #040905;
+}
+
+fieldset {
+    border: 2px solid #000000;
+    padding: 25px;
+}
+
+legend {
+    font-weight: bold;
+    color: #000000;
+    padding: 0 10px;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    color: #000000;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.question-box {
+    background-color: #fffaf0;
+    border: 2px dashed #f6ad55;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.get-btn {
+    background-color: #DB8548;
+	border: 5px solid #CC4A19;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.submit-btn {
+    background-color: #CC4A19;
+	border: 5px solid #a73208;
+    color: white;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #000000;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glarbo - Home</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <div class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="/">GLARBO</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="/leaderboard">Leaderboard</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- MAIN TRIVIA SECTION -->
+  <div class="trivia-container">
+
+    <!-- FLASH MESSAGE IF PRESENT -->
+    <% if (message) { %>
+      <div class="message"><%= message %></div>
+    <% } %>
+
+    <!-- FORM 1: REQUEST A TRIVIA QUESTION -->
+    <form action="/question" method="POST">
+      <fieldset>
+        <legend>Trivia Challenge</legend>
+
+        <div class="form-group">
+          <label for="username">Enter username:</label>
+          <input 
+            type="text" 
+            id="username" 
+            name="username" 
+            placeholder="Username" 
+            required 
+            value="<%= username ? username : '' %>"
+          >
+        </div>
+
+        <button type="submit" class="get-btn">Click for trivia question</button>
+      </fieldset>
+    </form>
+
+    <!-- FORM 2: DISPLAY QUESTION + SUBMIT ANSWER -->
+    <% if (question) { %>
+      <div class="question-box" id="questionDisplay">
+        <%= question %>
+      </div>
+
+      <form action="/submit" method="POST">
+        <input type="hidden" name="username" value="<%= username %>">
+        <input type="hidden" name="correctAnswer" value="<%= correctAnswer %>">
+
+        <div class="form-group">
+          <label for="answer">Your Answer:</label>
+          <input 
+            type="text" 
+            id="answer" 
+            name="answer" 
+            placeholder="Type answer here..." 
+            required
+          >
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Answer</button>
+      </form>
+    <% } %>
+
+  </div>
+
+</body>
+</html>
